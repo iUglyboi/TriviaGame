@@ -76,6 +76,9 @@ var trivia = {
     }
 
     var questionContent = Object.values(trivia.questions)[trivia.currentSet];
+    $("#question").text(questionContent);
+
+    var questionOptions = Object.values(trivia.options)[trivia.currentSet];
 
     $.each(questionOptions, function(index, key) {
       $("#options").append(
