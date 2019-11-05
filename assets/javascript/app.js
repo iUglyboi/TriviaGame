@@ -68,8 +68,8 @@ var trivia = {
   },
   nextQuestion: function() {
     trivia.timer = 5;
-    $("timer").removeClass("last-seconds");
-    $("timer").text(trivia.timer);
+    $("#timer").removeClass("last-seconds");
+    $("#timer").text(trivia.timer);
 
     if (!trivia.timerOn) {
       trivia.timerId = setInterval(trivia.timerRunning, 1000);
@@ -150,7 +150,7 @@ var trivia = {
       trivia.incorrect++;
       clearInterval(trivia.timerId);
       resultId = setTimeout(trivia.guessResult, 1000);
-      $("results").html(
+      $("#results").html(
         "<h2>Better luck next time! " + currentAnswer + "</h2>"
       );
     }
@@ -160,7 +160,7 @@ var trivia = {
     trivia.currentSet++;
 
     $(".option").remove();
-    $("#reults h3").remove();
+    $("#results h3").remove();
 
     trivia.nextQuestion();
   }
