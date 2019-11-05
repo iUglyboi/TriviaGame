@@ -1,14 +1,15 @@
-body{
-	background-image: url(https://img.nbc.com/sites/nbcunbc/files/files/images/2016/1/19/MDot-TheOffice-640x360-MP.jpg);
-	text-align: center;
+body {
+  background-color: black;
+  color: red;
+  text-align: center;
 }
 
-.text-muted{
-	color: magenta;
-}
-.last-seconds{
+.text-muted {
   color: red;
 }
-.option{
+.last-seconds {
+  color: red;
+}
+.option {
   margin: 15px;
 }
