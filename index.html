@@ -1,62 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Trivia Game</title>
-
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- BootStrap Link -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <!-- My CSS file -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="assets/css/style.css"
+    />
+    <!-- Link to Google Fonts (Typography) -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Righteous"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="favicon.ico" href="assets/images/icon3.png" />
   </head>
-
-  <body>
-  
-    
-   
-    <div class="container">
-      <div class="header text-center clearfix">
-        <h1 class="text-muted">Office Trivia Game</h1>
-      </div>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-        <div id="game">
-          <h2>OFFICE TRIVIA GAME!!</h2>
-          <p id="remaining-time" class="lead">Remaining Time: <span id="timer"></span></p>
-          <p id="question" class="lead"></p>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <!-- First Page with Start Button -->
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Totally Trivial Trivia!</h1>
+        <p class="lead btn btn-lg btn-danger" id="game-start">Start</p>
+        <div class="col-lg-4 col-lg-offset-4 text-center">
+          <p id="countdown">Time Remaining:<span id="timer"></span></p>
         </div>
-        <div id="results">
+      </main>
+
+      <!-- Trivia Questions Section -->
+      <div class="trivia-ques text-center">
+        <p class="quest">1. What type of farm does Dwight own?</p>
+        <form class="question">
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="correct"
+            />
+            Beet
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            Apple
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            Potato
+          </label>
+        </form>
+
+        <p class="quest">
+          2. What name did Pam and Angela fight over for their babies?
+        </p>
+        <form class="question">
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="correct"
+            />
+            Philip
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            Andrew
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            Christopher
+          </label>
+        </form>
+
+        <p class="quest">
+          3. Where does Jim tell Pam about his feelings?
+        </p>
+        <form class="question">
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            The Office
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="correct"
+            />
+            The Parking lot
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            The warehouse
+          </label>
+        </form>
+
+        <p class="quest">4. Which of Angela's cats does Dwight freeze?</p>
+        <form class="question">
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            Bandit
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            Jason
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="correct"
+            />
+            Sprinkles
+          </label>
+        </form>
+
+        <p class="quest">5. What tattoo is Andy forced to get?</p>
+        <form class="question">
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            A Tuna
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="correct"
+            />
+            A nard dog
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            A naked Micheal
+          </label>
+        </form>
+
+        <p class="quest">
+          6. Which cast member was having an affair with Angela's fiancé, the
+          senator
+        </p>
+        <form class="question">
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="correct"
+            />
+            Oscar
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            Kelly
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            Jim
+          </label>
+        </form>
+
+        <p class="quest">
+          7. Which strain of marijuana does Creed identify?
+        </p>
+        <form class="question">
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            Sour Diesel
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="wrong"
+            />
+            Purple Haze
+          </label>
+          <label class="form-check form-check-inline text-mysize">
+            <input
+              type="radio"
+              name="optradio"
+              class="optradio"
+              value="correct"
+            />
+            Northern Lights
+          </label>
+        </form>
+        </form>
+
+        <!-- Done Button -->
+        <div>
+          <p class="lead btn btn-lg btn-danger" id="game-done">Done</p>
         </div>
       </div>
 
-      <div class="row">
-        <div id="choices" class="text-center">
-          <button id="start" class="btn btn-info btn-lg">Start Game</button>
-          <div id="options">
-            
-          </div>
-          
-        </div>
+      <!-- Last page with Summary of results -->
+      <div class="results">
+        <p class="lead2" id="summary">All Done!</p>
+        <p class="lead2" id="correctScore">Correct Answers:</p>
+        <p class="lead2" id="wrongScore"></p>
+        <p class="lead2" id="unanswered"></p>
       </div>
+    </div>
+    <!--Div class container end -->
 
-    </div> 
-
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
- 
-    <script src="./assets/javascript/app.js"></script>  
-
-
+    <!-- JQuery & Javascript file Links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
   </body>
 </html>
